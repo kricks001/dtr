@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AuthController;
+use App\Models\Item;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ItemController;
 
@@ -22,6 +23,11 @@ Route::post("/items", [ItemController::class, "store"]);
 Route::get("/items/edit/{item}", [ItemController::class, "edit"]);
 Route::put("/items/{item}", [ItemController::class, "update"]);
 Route::delete("/items/{item}", [ItemController::class, "destroy"]);
+
+Route::get("/search", function () {
+    $items = Item::search(request("q"))->paginate();
+    return view("item.index", ["items"=> $items]);
+});
 
 Route::get("/login", [AuthController::class, "login"]);
 Route::post("/login", [AuthController::class, "signin"]);

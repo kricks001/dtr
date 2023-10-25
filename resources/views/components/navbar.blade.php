@@ -2,7 +2,7 @@
 <nav class="navbar bg-base-100">
     <div class="navbar-start justify-evenly">
         <img src="{{ asset('favicon.png', false) }}" alt="favicon" width="60" height="60" />
-        <form action="/search" method="post" class="join">
+        <form action="/search" method="get" class="join">
             <input type="search" name="q" id="q" placeholder="Search" class="rounded join-item p-2" />
             <button type="submit" class="join-item btn">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
