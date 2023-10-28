@@ -1,34 +1,34 @@
 ---
 deployment:
  tasks:
- - export DEPLOYPATH=/home/user/public_html/
- - /bin/cp -R . $DEPLOYPATH
- - export APP_DEBUG=false
- - export APP_NAME=dtr
- - export APP_ENV=production
- - export APP_URL=https://dtr.co.ke
- - export DB_CONNECTION=mysql
- - export DB_HOST=127.0.0.1
- - export DB_PORT=3306
- - export DB_DATABASE=dtrcoke_dtrdb
- - export DB_USERNAME=dtrcoke_dtrdbusername
- - export DB_PASSWORD=166Rufus.dead
- - export SCOUT_DRIVER=
- - export SCOUT_QUEUE=true
- - export BROADCAST_DRIVER=log
- - export CACHE_DRIVER=file
- - export FILESYSTEM_DISK=local
- - export QUEUE_CONNECTION=sync
- - export SESSION_DRIVER=file
- - export SESSION_LIFETIME=120
- - php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
- - php -r "if (hash_file('sha384', 'composer-setup.php') === 'e21205b207c3ff031906575712edab6f13eb0b361f2085f1f1237b7126d785e826a450292b6cfd1d64d92e6563bbde02') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
- - php composer-setup.php --filename=composer
- - php -r "unlink('composer-setup.php');"
- - php composer install
- - npm i && npm run build
- - php composer install --optimize-autoloader --no-dev
- - php artisan config:cache
- - php artisan event:cache
- - php artisan route:cache
- - php artisan view:cache
+  - export DEPLOYPATH=/home/user/public_html/
+  - /bin/cp -R . $DEPLOYPATH
+  - export APP_DEBUG=false
+  - export APP_NAME=dtr
+  - export APP_ENV=production
+  - export APP_URL=https://dtr.co.ke
+  - export DB_CONNECTION=mysql
+  - export DB_HOST=127.0.0.1
+  - export DB_PORT=3306
+  - export DB_DATABASE=dtrcoke_dtrdb
+  - export DB_USERNAME=dtrcoke_dtrdbusername
+  - export DB_PASSWORD=166Rufus.dead
+  - export SCOUT_DRIVER=
+  - export SCOUT_QUEUE=true
+  - export BROADCAST_DRIVER=log
+  - export CACHE_DRIVER=file
+  - export FILESYSTEM_DISK=local
+  - export QUEUE_CONNECTION=sync
+  - export SESSION_DRIVER=file
+  - export SESSION_LIFETIME=120
+  - php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
+  - php -r "if (hash_file('sha384', 'composer-setup.php') === 'e21205b207c3ff031906575712edab6f13eb0b361f2085f1f1237b7126d785e826a450292b6cfd1d64d92e6563bbde02') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
+  - php composer-setup.php --filename=composer
+  - php -r "unlink('composer-setup.php');"
+  - php composer install
+  - npm i && npm run build
+  - php composer install --optimize-autoloader --no-dev
+  - php artisan config:cache
+  - php artisan event:cache
+  - php artisan route:cache
+  - php artisan view:cache
